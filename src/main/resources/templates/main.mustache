@@ -6,14 +6,34 @@
 </head>
 <body>
 <div>
+    <!-- Форма отправки сообщений -->
+    <div>
+        <form method="post">
+            <input type="text" name="inText" placeholder="Сообщение" />
+            <input text="text" name="inTag" placeholder="Тэг" />
+            <button type="submit" name="sendMessage">Добавить</button>
+        </form>
+    </div>
+
+    <!-- Форма фильтрации -->
+    <div>
+        <form method="post" action="filter">
+            <input text="text" name="inFilter" placeholder="поиск по тэгу..." />
+            <button type="submit" name="searchByTag">Найти</button>
+        </form>
+    </div>
+
+    <!-- Вывод сообщений -->
     <div>Список сообщений: </div>
-    {{#messages}}
-        <div>
-            <ul>
-                <li>{{id}}: {{text}} {{tag}}</li>
-            </ul>
-        </div>
-    {{/messages}}
-</div>
+        <p>
+        {{#messages}}
+            <div>
+                <ul>
+                    <li>{{id}}: {{text}} {{tag}}</li>
+                </ul>
+            </div>
+        {{/messages}}
+        </p>
+    </div>
 </body>
 </html>
