@@ -6,9 +6,14 @@
 </head>
 <body>
 <div>
-    <h1>
-        {{some}}
-    </h1>
+    <div>Список сообщений: </div>
+    {{#messages}}
+        <div>
+            <ul>
+                <li>{{id}}: {{text}} {{tag}}</li>
+            </ul>
+        </div>
+    {{/messages}}
 </div>
 </body>
 </html>
