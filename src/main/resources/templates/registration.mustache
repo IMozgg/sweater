@@ -6,14 +6,16 @@
 </head>
 <body>
     <div>
-        Страница логина
-        <form action="/login" method="post">
+        Add new User
+        {{#message}}
+            {{message}}
+        {{/message}}
+        <form action="/registration" method="post">
             <div><label>User Name: <input type="text" name="username" /></label></div>
             <div><label>User Password: <input type="text" name="password"/></label></div>
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
             <div><input type="submit" value="Логин"></div>
         </form>
-        <a href="/registration">Регистрация</a>
     </div>
 </body>
 </html>
