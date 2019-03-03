@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+    <div>
+        Страница логина
+        <form action="/login" method="post">
+            <div><label>User Name: <input type="text" name="username" /></label></div>
+            <div><label>User Password: <input type="text" name="password"/></label></div>
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <div><input type="submit" value="Логин"></div>
+        </form>
+        <a href="/registration">Регистрация</a>
+    </div>
+</body>
+</html>
