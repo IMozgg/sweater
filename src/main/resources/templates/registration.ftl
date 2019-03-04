@@ -1,3 +1,15 @@
+<#import "parts/common.ftl" as c>
+<#import  "parts/login.ftl" as f>
+
+<@c.page>
+    <div><h3>Страница логина</h3></div>
+    <div>
+        Add new User
+        ${message}
+        <@f.login "/registration" />
+    </div>
+</@c.page>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
