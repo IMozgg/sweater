@@ -22,7 +22,7 @@
     <!-- Форма фильтрации -->
     <div>
         <form method="get" action="/main">
-            <input text="text" name="filter" value="${filter}" placeholder="поиск по тэгу..." />
+            <input text="text" name="filter" value="${filter?ifExists}" placeholder="поиск по тэгу..." />
             <button type="submit">Найти</button>
         </form>
     </div>
