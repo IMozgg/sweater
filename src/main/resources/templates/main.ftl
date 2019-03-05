@@ -11,9 +11,10 @@
 
     <!-- Форма отправки сообщений -->
     <div>
-        <form method="post">
-            <input type="text" name="inText" placeholder="Сообщение" />
-            <input text="text" name="inTag" placeholder="Тэг" />
+        <form method="post" enctype="multipart/form-data">
+            <input type="text" name="text" placeholder="Сообщение" />
+            <input text="text" name="tag" placeholder="Тэг" />
+            <input type="file" name="file">
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <button type="submit" name="sendMessage">Добавить</button>
         </form>
@@ -31,9 +32,15 @@
     <div>Список сообщений: </div>
         <p><#list  messages as message>
             <div>
-                <ul>
-                    <li>${message.id}: ${message.text} ${message.tag} ${message.authorName}</li>
-                </ul>
+                ${message.id}
+                ${message.text}
+                ${message.tag}
+                ${message.authorName}
+                <div>
+                    <#if message.filename??>
+                        <img src="/img/${message.filename}">
+                    </#if>
+                </div>
             </div>
             <#else>
             No Message
