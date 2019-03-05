@@ -1,11 +1,9 @@
 <#import "parts/common.ftl" as c>
-<#import  "parts/login.ftl" as f>
 
 <@c.page>
 
     <!-- Форма логаута -->
     <div>
-        <@f.logout />
         <span><a href="/user">Список пользователей</a></span>
     </div>
 
